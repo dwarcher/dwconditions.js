@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+    
+<head>
+<script src="js/dwconditions.js" type="text/javascript"></script>
+<body>
+
+	<script>
+		function doSomething()
+		{
+			alert("Success!");
+		}
+
+		dwconditions.addConditional("conditionA", "conditionB", "conditionC", doSomething);
+
+		function onClickedA()
+		{
+			document.getElementById("debug").innerHTML = "Clicked A";			
+			dwconditions.conditionMet("conditionA");
+		}
+
+		function onClickedB()
+		{
+			document.getElementById("debug").innerHTML = "Clicked B";			
+			dwconditions.conditionMet("conditionB");
+		}
+
+		function onClickedC()
+		{
+			document.getElementById("debug").innerHTML = "Clicked C";			
+			dwconditions.conditionMet("conditionC");
+		}
+
+	</script>
+
+	<h2>DWConditions.js (1.32kb)</h2>
+	<p>DWConditions is used when you need to trigger a callback when several things have completed. For example, if you need to handle updating the interface only when several ajax calls have completed.</p>
+	<p>Dependencies: None</p>
+
+	<h2>Example:</h2>
+
+	<p>Click the links:</p>
+
+	<a href="#" onclick="onClickedA()" >Condition A</a>
+	<a href="#" onclick="onClickedB()" >Condition B</a>
+	<a href="#" onclick="onClickedC()" >Condition C</a>
+
+	<p id="debug"></p>
+
+<h3>Code:</h3>	
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>        &lt;script src=&quot;js/dwconditions.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+        
+        ...
+
+        function doSomething()
+        {
+            alert(&quot;Success!&quot;);
+        }
+
+        dwconditions.addConditional(&quot;conditionA&quot;, &quot;conditionB&quot;, &quot;conditionC&quot;, doSomething);
+
+        function onClickedA()
+        {
+            dwconditions.conditionMet(&quot;conditionA&quot;);
+        }
+
+        function onClickedB()
+        {
+            dwconditions.conditionMet(&quot;conditionB&quot;);
+        }
+
+        function onClickedC()
+        {
+            dwconditions.conditionMet(&quot;conditionC&quot;);
+        }
+</code></pre>
+
+
+</body>
