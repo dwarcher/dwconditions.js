@@ -24,3 +24,5 @@ Example:
     dwconditions.conditionMet("conditionC");		// doSomething() will fire now.
 
 
+
+This is licensed under the GNU GPL. See [license.txt]
